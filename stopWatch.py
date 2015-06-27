@@ -27,11 +27,12 @@ def start_handler():
 
 def stop_handler():
     global stop, whole_game, win_game
-    stop = True
-    whole_game += 1
-    if(time % 10 == 0):
-        win_game += 1
-    timer.stop()
+    if stop == False:
+        stop = True
+        whole_game += 1
+        if(time % 10 == 0):
+            win_game += 1
+        timer.stop()
     
 def reset_handler():
     global stop, whole_game, win_game, time
