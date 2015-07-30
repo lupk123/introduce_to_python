@@ -151,7 +151,7 @@ def hit():
         player.add_card(deck.deal_card())
     # if busted, assign a message to outcome, update in_play and score
         if player.get_value() > 21:            
-            outcome = "Bust!!! You loose!!!"
+            outcome = "Bust!!! You lose!!!"
             in_play = False
             score -= 1
 #            flag = 1
@@ -176,7 +176,7 @@ def stand():
             outcome = "You Win!!!"
             score += 1        
         elif dealerValue >= playerValue:
-            outcome = "You loose!!!"
+            outcome = "You lose!!!"
             score -= 1 
         else:
             outcome = "You Win!!!"
